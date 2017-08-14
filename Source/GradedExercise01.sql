@@ -23,4 +23,4 @@ insert into drivetime values (4, "2017-08-10", 0713, 0754);
 insert into drivetime values (5, "2017-08-11", 0703, 0732);
 insert into drivetime values (6, "2017-08-14", 0710, 0739);
 
-select (arrival - departure) as time from drivetime;
+select date, (arrival - departure) as time from drivetime;
