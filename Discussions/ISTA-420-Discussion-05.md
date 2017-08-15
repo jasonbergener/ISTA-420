@@ -17,7 +17,7 @@
 1. Give an example of a composite join.
     - **An example of a composite join would be select C.name, O.number from sales.customers as C inner join sales.orders as O on customers.id=orders.custid and costomers.address != orders.shippingaddress;**
 1. What is the difference between the following two queries? The business problem is “How many orders do we have from each customer?"
-    ```
+    ```sql
     ================first query===============
     SELECT C.custid, COUNT(*) AS numorders
     FROM Sales.Customers AS C
@@ -33,7 +33,7 @@
     ```
     - **The first query will yield an incorrect result because it will be counting the customers, whether they placed an order or not. A customer that placed 5 orders will have the correct result, but a customer that placed none will still show a count of 1. The second query only counts the orders that were actually placed and returns the correct results.**
 1. What might be one reason the following query does not return the column custID in this query?
-    ```
+    ```sql
     SELECT C.custid, C.companyname, O.orderid, O.orderdate
     FROM Sales.Customers AS C
     LEFT OUTER JOIN Sales.Orders AS O
