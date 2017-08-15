@@ -16,7 +16,7 @@ system."
 1. What is a relation as defined in the textbook? A one word answer to this question is sufficient.
     - **A relation is a set as defined by the textbook.**
 1. Is this table in first normal form? Why or why not? If it is not, how would you change it?
-    ```
+    ```sql
     create table faculty (
       facID int primary key,
       facName text,
@@ -29,7 +29,7 @@ system."
     | 3     | Casey Cason      | AA, BBA, MBA, DEd |
     - **This table is not in the first normal form. Each row is identified by a unique primary key, but the names and credentials are not atomic. To be in first normal form, the names should be broken down by firstName, lastName, and the credentials should be referenced using foreign keys that point to a separate table for credentials.**
 1. Is this table in second normal form? Why or why not? If it is not, how would you change it?
-    ```
+    ```sql
     create table pets (
       ownerID int primary key,
       petID int primary key,
@@ -45,7 +45,7 @@ system."
     | 2       | 3     | Emilio         | Estevez       | Midnight | Persian Cat     |
     - **This table is not in the second normal form because the non-key attributes do not depend on the entire primary key. For example, you can use ownerID alone to find ownerFirstName.**
 1. Is this table in third normal form? Why or why not? If it is not, how would you change it?
-    ```
+    ```sql
     create table friends (
       friendID int primary key,
       friendName text,
