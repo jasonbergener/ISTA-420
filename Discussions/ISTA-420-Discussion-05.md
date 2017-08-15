@@ -13,7 +13,7 @@
 1. Describe in your own words the output from an cross join.
     - **A cross join returns all rows from both tables (no filtering).**
 1. A convenient mnemonic for remembering the various joins is “Ohio." Why is this true?
-    - **I couldn't find any referrence to this. My best guess is one of the Os stands for outer and the I stands for inner.**
+    - **I couldn't find any reference to this. My best guess is one of the Os stands for outer and the I stands for inner.**
 1. Give an example of a composite join.
     - **An example of a composite join would be select C.name, O.number from sales.customers as C inner join sales.orders as O on customers.id=orders.custid and costomers.address != orders.shippingaddress;**
 1. What is the difference between the following two queries? The business problem is “How many orders do we have from each customer?"
