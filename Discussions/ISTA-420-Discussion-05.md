@@ -40,4 +40,4 @@
     ON C.custid = O.custid
     WHERE O.orderdate >= '20160101';
     ```
-    - **In the event that no orders had an orderdate of ‘20160101’.**
+    - **There is no reason that the column custID would not be returned in the query. One reason that the query might not return results under the columns is if no orders had an orderdate on or after ‘20160101’.**
