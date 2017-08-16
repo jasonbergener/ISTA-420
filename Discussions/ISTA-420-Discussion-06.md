@@ -29,7 +29,7 @@
         where empid NOT IN
         (select empid
         from sales.orders
-	where orderdate like '2016-05%');
+		where orderdate like '2016-05%');
       ```
 1.	Give an example of a subquery that returns table values. When would you use this kind of subquery?
     - **The below query contains a subquery that returns table values. This kind of subquery would be to simplify solutions using a modular approach. It would also help you circumvent certain restrictions in the language, such as the inability to refer to column aliases assigned in the select clause in query clauses that are logically processed before the select clause**
@@ -47,8 +47,8 @@
         where exists
         (select empid
         from sales.orders o
-	where e.empid=o.empid
-	and orderdate like '2016-05%');
+		where e.empid=o.empid
+		and orderdate like '2016-05%');
       ```
 1. What happens if we use the not operator before a predicate? Give an example.
     - **Using the not operator before the exists predicate returns true for each row that isn't returned from the query that follows it. For example, in the following query the not exists predicate returns true if an employee has no orders in May, 2016.**
@@ -58,8 +58,8 @@
         where not exists
         (select empid
         from sales.orders o
-	where e.empid=o.empid
-	and orderdate like '2016-05%');
+		where e.empid=o.empid
+		and orderdate like '2016-05%');
       ```
 1. When you use exists or not exists with respect to a row in a database, does it return two or three values? Explain your answer.
     - **The exists predicate, with or without the not operator returns one of two possible values, either true or false. Exists uses two-valued logic and not three-valued logic. If you think about it, there’s no situation where it’s unknown whether a query returns any rows.**
