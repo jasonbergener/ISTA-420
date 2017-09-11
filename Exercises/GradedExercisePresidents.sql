@@ -1,3 +1,7 @@
+--Author: Jason Bergener
+--Date: 20170906
+--Graded Exercise using the presidents.csv and TSQLV4 database
+
 drop table if exists dbo.Presidents;
 
 create table dbo.Presidents
